@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Eternal Frames — Wedding Photography & Films</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+<!-- Global styles -->
+<link rel="stylesheet" href="css/style.css"/>
+<!-- Page-specific styles -->
+<link rel="stylesheet" href="css/home.css"/>
+<link rel="stylesheet" href="css/gallery.css"/>
+<link rel="stylesheet" href="css/videos.css"/>
+<link rel="stylesheet" href="css/pricing.css"/>
+<link rel="stylesheet" href="css/portal-contact.css"/>
+</head>
+<body>
+
+<!-- ── WHATSAPP BUTTON ── -->
+<div class="wa-btn">
+  <span class="wa-tooltip">💬 Chat on WhatsApp</span>
+  <a class="wa-circle" href="https://wa.me/9576611526?text=Hi!%20I'm%20interested%20in%20wedding%20photography." target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" onclick="showPage('home');return false">Eternal <b>Frames</b></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home');return false" data-page="home">Home</a></li>
+    <li><a href="#" onclick="showPage('gallery');return false" data-page="gallery">Gallery</a></li>
+    <li><a href="#" onclick="showPage('videos');return false" data-page="videos">Films</a></li>
+    <li><a href="#" onclick="showPage('pricing');return false" data-page="pricing">Pricing</a></li>
+    <li><a href="#" onclick="showPage('portal');return false" data-page="portal">Client Portal</a></li>
+    <li><a href="#" onclick="showPage('contact');return false" data-page="contact">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-book" onclick="showPage('contact');return false">Book Now</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── MOBILE NAV DRAWER ── -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#" onclick="showPage('home');toggleMobileNav();return false">Home</a>
+  <a href="#" onclick="showPage('gallery');toggleMobileNav();return false">Gallery</a>
+  <a href="#" onclick="showPage('videos');toggleMobileNav();return false">Films</a>
+  <a href="#" onclick="showPage('pricing');toggleMobileNav();return false">Pricing</a>
+  <a href="#" onclick="showPage('portal');toggleMobileNav();return false">Client Portal</a>
+  <a href="#" onclick="showPage('contact');toggleMobileNav();return false">Contact</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <span class="hero-tag">✦ Wedding Photography & Cinematic Films</span>
+      <h1 class="hero-h1">Where Love<br/><i>Becomes Art</i></h1>
+      <p class="hero-sub">Every glance, every tear, every laugh — captured with intention and preserved as timeless art.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-gold" onclick="showPage('gallery');return false">Explore Portfolio</a>
+        <a href="#" class="hero-play" onclick="showPage('videos');return false">
+          <span class="play-circle">▶</span>
+          <span>Watch Reel</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-bar"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stat-item reveal"><span class="stat-n">340+</span><span class="stat-l">Weddings Captured</span></div>
+    <div class="stat-item reveal"><span class="stat-n">8</span><span class="stat-l">Years of Experience</span></div>
+    <div class="stat-item reveal"><span class="stat-n">15</span><span class="stat-l">States & Destinations</span></div>
+    <div class="stat-item reveal"><span class="stat-n">100%</span><span class="stat-l">Happy Couples</span></div>
+  </div>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="about-grid">
+      <div class="about-imgs reveal">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1605732562742-3023a888e56e?w=600&q=80" alt="Photographer at work"/>
+        <img class="about-img-sec" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80" alt="Couple photo"/>
+        <div class="about-corner"></div>
+        <div class="about-xp"><strong>8+</strong>Years of Love Stories</div>
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">✦ About the Photographer</span>
+        <h2 class="h2">Crafting Stories<br/>One Frame <i>at a Time</i></h2>
+        <p class="body-text">I believe every couple has a story only they know — the inside jokes, the quiet moments, the small rituals. My lens doesn't just see your wedding; it searches for those unseen chapters.</p>
+        <p class="body-text" style="margin-top:14px">With 8 years and 340+ weddings behind the lens, I've perfected the art of blending in — present everywhere, noticed nowhere, capturing everything.</p>
+        <div style="display:flex;gap:16px;margin-top:36px;flex-wrap:wrap">
+          <a href="#" class="btn btn-gold" onclick="showPage('gallery');return false">View Portfolio</a>
+          <a href="#" class="btn btn-outline" onclick="showPage('contact');return false">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="divider"><span>Our Latest Work</span></div>
+
+  <!-- Mini Gallery Preview -->
+  <div class="home-gallery-grid">
+    <div class="home-gallery-item reveal" onclick="showPage('gallery')">
+      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&q=80" alt="Wedding photo"/>
+    </div>
+    <div class="home-gallery-item offset reveal" onclick="showPage('gallery')">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80" alt="Wedding photo"/>
+    </div>
+    <div class="home-gallery-item reveal" onclick="showPage('gallery')">
+      <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80" alt="Wedding photo"/>
+    </div>
+    <div class="home-gallery-item offset reveal" onclick="showPage('gallery')">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80" alt="Wedding photo"/>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="testi-section">
+    <div class="reveal" style="text-align:center">
+      <span class="eyebrow" style="justify-content:center;display:block">✦ Love Notes</span>
+      <h2 class="h2" style="text-align:center">What Couples <i>Are Saying</i></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="tstar">★★★★★</div>
+        <p class="tquote">"He captured moments we didn't even know were happening. When we opened our gallery, we both cried — every frame felt like a painting. Truly a magician."</p>
+        <span class="tauthor">— Priya & Arjun · Mumbai</span>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:.1s">
+        <div class="tstar">★★★★★</div>
+        <p class="tquote">"Our Udaipur destination wedding was a dream — his photos made it feel even more magical. He disappeared into the background and the results were breathtaking."</p>
+        <span class="tauthor">— Sneha & Vikram · Bangalore</span>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:.2s">
+        <div class="tstar">★★★★★</div>
+        <p class="tquote">"Not just a photographer, a storyteller. The raw emotions he caught during our ceremony left our entire family in complete awe. Will recommend forever."</p>
+        <span class="tauthor">— Meera & Rohit · Delhi</span>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════
+     GALLERY PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-gallery">
+
+  <div class="gallery-hero">
+    <div>
+      <span class="eyebrow">✦ Portfolio</span>
+      <h1 class="h2" style="margin:0">Moments <i>Frozen in Light</i></h1>
+    </div>
+  </div>
+
+  <div class="gallery-filters" id="gallery-filters">
+    <button class="filter-btn active" onclick="filterGallery('all',this)">All</button>
+    <button class="filter-btn" onclick="filterGallery('ceremony',this)">Ceremony</button>
+    <button class="filter-btn" onclick="filterGallery('portraits',this)">Portraits</button>
+    <button class="filter-btn" onclick="filterGallery('reception',this)">Reception</button>
+    <button class="filter-btn" onclick="filterGallery('details',this)">Details</button>
+    <button class="filter-btn" onclick="filterGallery('destination',this)">Destination</button>
+  </div>
+
+  <div class="gallery-masonry" id="gallery-masonry">
+    <div class="gcard" data-cat="ceremony" onclick="openLightbox(0)">
+      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt="Ceremony"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Ceremony · Priya & Arjun</span></div>
+    </div>
+    <div class="gcard" data-cat="portraits" onclick="openLightbox(1)">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Portrait"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Portraits · Sneha & Vikram</span></div>
+    </div>
+    <div class="gcard" data-cat="destination" onclick="openLightbox(2)">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Destination"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Destination · Udaipur</span></div>
+    </div>
+    <div class="gcard" data-cat="reception" onclick="openLightbox(3)">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt="Reception"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Reception · First Dance</span></div>
+    </div>
+    <div class="gcard" data-cat="portraits" onclick="openLightbox(4)">
+      <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=600&q=80" alt="Kiss"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Portraits · The Kiss</span></div>
+    </div>
+    <div class="gcard" data-cat="details" onclick="openLightbox(5)">
+      <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80" alt="Details"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Details · Florals</span></div>
+    </div>
+    <div class="gcard" data-cat="ceremony" onclick="openLightbox(6)">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Vows"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Ceremony · Vows</span></div>
+    </div>
+    <div class="gcard" data-cat="destination" onclick="openLightbox(7)">
+      <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600&q=80" alt="Destination"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Destination · Goa</span></div>
+    </div>
+    <div class="gcard" data-cat="reception" onclick="openLightbox(8)">
+      <img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?w=600&q=80" alt="Reception"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Reception · Celebrations</span></div>
+    </div>
+    <div class="gcard" data-cat="portraits" onclick="openLightbox(9)">
+      <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=600&q=80" alt="Portrait"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Portraits · Golden Hour</span></div>
+    </div>
+    <div class="gcard" data-cat="details" onclick="openLightbox(10)">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Details"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Details · Rings</span></div>
+    </div>
+    <div class="gcard" data-cat="ceremony" onclick="openLightbox(11)">
+      <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80" alt="Ceremony"/>
+      <div class="gcard-overlay"><span class="gcard-tag">Ceremony · Meera & Rohit</span></div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+    <div class="lb-inner">
+      <img class="lb-img" id="lb-img" src="" alt=""/>
+      <p class="lb-caption" id="lb-caption"></p>
+    </div>
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+  </div>
+
+</div><!-- /page-gallery -->
+
+
+<!-- ═══════════════════════════════════
+     VIDEOS PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-videos">
+
+  <div class="videos-hero">
+    <img class="video-bg-reel" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1600&q=80" alt=""/>
+    <div class="videos-hero-overlay"></div>
+    <div class="videos-hero-content">
+      <span class="eyebrow" style="display:block">✦ Cinematic Films</span>
+      <h1 class="h2" style="margin:0">Love Stories <i>in Motion</i></h1>
+    </div>
+  </div>
+
+  <!-- Scrolling Reel Strip -->
+  <div class="reel-strip">
+    <div class="reel-track" id="reelTrack">
+      <img class="reel-item" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1562967914-608f82629710?w=300&q=60" alt=""/>
+      <!-- Duplicate for seamless loop -->
+      <img class="reel-item" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=300&q=60" alt=""/>
+      <img class="reel-item" src="https://images.unsplash.com/photo-1562967914-608f82629710?w=300&q=60" alt=""/>
+    </div>
+  </div>
+
+  <!-- Featured Video -->
+  <div class="featured-video">
+    <div style="margin-bottom:32px">
+      <span class="eyebrow">✦ Featured Film</span>
+      <h2 class="h2">Priya & Arjun — <i>A Mumbai Love Story</i></h2>
+      <p class="body-text" style="max-width:550px">A cinematic journey through one of our most beautiful weddings — intimate moments, grand celebrations, and a love story that will move you.</p>
+    </div>
+    <div class="video-frame" id="featuredVideoFrame">
+      <iframe id="featuredIframe" src="" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1" allowfullscreen title="Wedding Film"></iframe>
+      <div class="video-thumb-overlay" id="featuredOverlay" onclick="playFeatured()">
+        <div class="big-play">▶</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Grid -->
+  <div class="video-grid">
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Sneha & Vikram</div>
+        <div class="vid-meta">Destination · Udaipur · 2024</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Meera & Rohit</div>
+        <div class="vid-meta">Grand Affair · Delhi · 2024</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Aisha & Kabir</div>
+        <div class="vid-meta">Classic Wedding · Goa · 2023</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1501901609772-df0848060b33?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Nisha & Dev</div>
+        <div class="vid-meta">Reception · Mumbai · 2023</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Kavya & Siddharth</div>
+        <div class="vid-meta">Intimate · Jaipur · 2023</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+    <div class="vid-card" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0')">
+      <img class="vid-thumb" src="https://images.unsplash.com/photo-1562967914-608f82629710?w=500&q=80" alt=""/>
+      <div class="vid-info">
+        <div class="vid-title">Riya & Aman</div>
+        <div class="vid-meta">Elopement · Rishikesh · 2022</div>
+      </div>
+      <div class="vid-play-btn">▶</div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="vmodal" id="vmodal">
+    <div class="vmodal-inner">
+      <button class="vmodal-close" onclick="closeVideoModal()">✕</button>
+      <div class="vmodal-frame">
+        <iframe id="vmodal-iframe" src="" allowfullscreen title="Wedding Video"></iframe>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-videos -->
+
+
+<!-- ═══════════════════════════════════
+     PRICING PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-pricing">
+
+  <div class="pricing-hero">
+    <span class="eyebrow">✦ Pricing Calculator</span>
+    <h1 class="h2">Build Your <i>Perfect Package</i></h1>
+    <p class="body-text" style="max-width:520px">Mix and match exactly what you need. Your price updates instantly as you choose.</p>
+  </div>
+
+  <div class="calculator">
+    <div class="calc-panel">
+
+      <!-- Coverage Type -->
+      <div class="calc-section">
+        <div class="calc-section-title">1 — Coverage Type</div>
+        <div class="calc-options" id="coverage-opts">
+          <label class="calc-opt selected" onclick="selectOpt(this,'coverage',35000)">
+            <input type="radio" name="coverage" checked/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Elopement</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">4 hours · 200+ photos · online gallery</span>
+            </span>
+            <span class="calc-opt-price">₹35,000</span>
+          </label>
+          <label class="calc-opt" onclick="selectOpt(this,'coverage',75000)">
+            <input type="radio" name="coverage"/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Classic Wedding</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">Full day · 500+ photos · premium album</span>
+            </span>
+            <span class="calc-opt-price">₹75,000</span>
+          </label>
+          <label class="calc-opt" onclick="selectOpt(this,'coverage',140000)">
+            <input type="radio" name="coverage"/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Grand Affair</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">2 days · 700+ photos · video reel · luxury album</span>
+            </span>
+            <span class="calc-opt-price">₹1,40,000</span>
+          </label>
+          <label class="calc-opt" onclick="selectOpt(this,'coverage',220000)">
+            <input type="radio" name="coverage"/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Destination Wedding</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">Multi-day · full coverage · travel included</span>
+            </span>
+            <span class="calc-opt-price">₹2,20,000+</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="calc-section">
+        <div class="calc-section-title">2 — Add-ons</div>
+        <label class="calc-checkbox" onclick="toggleAddon(this,18000)">
+          <span class="chk">✓</span>
+          <span class="calc-opt-label" style="font-size:.75rem">
+            <strong style="display:block;font-weight:400;margin-bottom:2px">Pre-Wedding Shoot</strong>
+            <span style="font-size:.68rem;color:var(--smoke)">4 hours · 100+ photos · location of your choice</span>
+          </span>
+          <span class="calc-opt-price">+ ₹25,000</span>
+        </label>
+        <label class="calc-checkbox" onclick="toggleAddon(this,25000)">
+          <span class="chk">✓</span>
+          <span class="calc-opt-label" style="font-size:.75rem">
+            <strong style="display:block;font-weight:400;margin-bottom:2px">Cinematic Video Reel</strong>
+            <span style="font-size:.68rem;color:var(--smoke)">5 min highlight film · colour graded · music licensed</span>
+          </span>
+          <span class="calc-opt-price">+ ₹14,000</span>
+        </label>
+        <label class="calc-checkbox" onclick="toggleAddon(this,12000)">
+          <span class="chk">✓</span>
+          <span class="calc-opt-label" style="font-size:.75rem">
+            <strong style="display:block;font-weight:400;margin-bottom:2px">Premium Photo Album</strong>
+            <span style="font-size:.68rem;color:var(--smoke)">40-page hardcover · lay-flat · heirloom quality</span>
+          </span>
+          <span class="calc-opt-price">+ ₹12,000</span>
+        </label>
+        <label class="calc-checkbox" onclick="toggleAddon(this,8000)">
+          <span class="chk">✓</span>
+          <span class="calc-opt-label" style="font-size:.75rem">
+            <strong style="display:block;font-weight:400;margin-bottom:2px">Rush Delivery</strong>
+            <span style="font-size:.68rem;color:var(--smoke)">All photos delivered within 2 weeks (vs standard 4 weeks)</span>
+          </span>
+          <span class="calc-opt-price">+ ₹8,000</span>
+        </label>
+        <label class="calc-checkbox" onclick="toggleAddon(this,6000)">
+          <span class="chk">✓</span>
+          <span class="calc-opt-label" style="font-size:.75rem">
+            <strong style="display:block;font-weight:400;margin-bottom:2px">USB Backup Drive</strong>
+            <span style="font-size:.68rem;color:var(--smoke)">All hi-res photos on branded USB with keepsake box</span>
+          </span>
+          <span class="calc-opt-price">+ ₹6,000</span>
+        </label>
+      </div>
+
+      <!-- Delivery Timeline -->
+      <div class="calc-section">
+        <div class="calc-section-title">3 — Delivery Timeline</div>
+        <div class="calc-options" id="delivery-opts">
+          <label class="calc-opt selected" onclick="selectOpt(this,'delivery',0)">
+            <input type="radio" name="delivery" checked/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Standard (4 weeks)</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">Carefully edited, worth the wait</span>
+            </span>
+            <span class="calc-opt-price">Included</span>
+          </label>
+          <label class="calc-opt" onclick="selectOpt(this,'delivery',8000)">
+            <input type="radio" name="delivery"/>
+            <span class="calc-opt-label">
+              <strong style="display:block;margin-bottom:3px;font-weight:400">Express (2 weeks)</strong>
+              <span style="font-size:.68rem;color:var(--smoke)">Priority editing queue</span>
+            </span>
+            <span class="calc-opt-price">+ ₹8,000</span>
+          </label>
+        </div>
+      </div>
+
+    </div><!-- /calc-panel -->
+
+    <!-- Summary Card -->
+    <div class="summary-card reveal">
+      <h3 class="summary-title">Your Package Summary</h3>
+      <div class="summary-lines" id="summary-lines">
+        <div class="summary-line"><span>Elopement Coverage</span><span>₹35,000</span></div>
+        <div class="summary-line"><span>Delivery: Standard</span><span>Included</span></div>
+      </div>
+      <div class="summary-total-row">
+        <span class="summary-total-label">Estimated Total</span>
+        <span class="summary-total" id="summary-total">₹35,000</span>
+      </div>
+      <p class="summary-note">✦ All prices are estimates. Final quote may vary by travel, venue, and specific requirements. GST may apply.</p>
+      <a href="#" class="btn btn-gold summary-cta" onclick="showPage('contact');return false">Request This Package →</a>
+    </div>
+
+  </div><!-- /calculator -->
+
+</div><!-- /page-pricing -->
+
+
+<!-- ═══════════════════════════════════
+     CLIENT PORTAL PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-portal">
+
+  <div class="portal-hero">
+    <span class="eyebrow">✦ Client Portal</span>
+    <h1 class="h2">Your <i>Private Gallery</i></h1>
+    <p class="body-text" style="max-width:480px">Access your wedding photos securely. Enter your credentials to view and download your memories.</p>
+  </div>
+
+  <!-- Login View -->
+  <div class="portal-layout" id="portal-login-view">
+    <div class="portal-left">
+      <div class="portal-left-overlay">
+        <span class="eyebrow">✦ Secure Access</span>
+        <h3 style="font-family:'Playfair Display',serif;font-weight:300;font-size:1.6rem;font-style:italic;line-height:1.2">Your memories are<br/>waiting for you</h3>
+        <p style="font-size:.72rem;color:var(--gold-pale);margin-top:12px;line-height:1.8;font-weight:300">Your gallery is privately hosted and secured. Only you and your partner have access.</p>
+      </div>
+    </div>
+    <div class="portal-right">
+      <div class="login-form">
+        <h2 class="login-title">Welcome Back</h2>
+        <p class="login-sub">Please log in with the credentials sent to you after your wedding shoot.</p>
+        <div class="field">
+          <label>Email Address</label>
+          <input type="email" id="login-email" placeholder="yourname@email.com"/>
+        </div>
+        <div class="field">
+          <label>Gallery Password</label>
+          <input type="password" id="login-pass" placeholder="Enter your password" onkeydown="if(event.key==='Enter')doLogin()"/>
+        </div>
+        <button class="btn btn-gold login-btn" onclick="doLogin()">Access My Gallery</button>
+        <p class="login-err" id="login-err">⚠ Incorrect credentials. Try: priya@email.com / wedding2024</p>
+        <p class="login-hint">Demo login — email: <b>priya@email.com</b> · password: <b>wedding2024</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard (shown after login) -->
+  <div class="portal-dashboard" id="portal-dashboard">
+    <div class="portal-header">
+      <h2 class="portal-welcome">Welcome back, <i>Priya & Arjun</i> ✦</h2>
+      <button class="portal-logout" onclick="doLogout()">Log Out</button>
+    </div>
+    <div class="portal-info">
+      <div class="info-card"><span class="info-card-num">247</span><span class="info-card-label">Photos Ready</span></div>
+      <div class="info-card"><span class="info-card-num">12</span><span class="info-card-label">Videos</span></div>
+      <div class="info-card"><span class="info-card-num">Jan 28</span><span class="info-card-label">Wedding Date</span></div>
+    </div>
+    <div class="client-gallery-title">Your Photos — All 247 Delivered</div>
+    <div class="client-gallery">
+      <div class="client-gcard" onclick="openLightbox(0)"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(1)"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(4)"><img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(3)"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(2)"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(5)"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(6)"><img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=80" alt=""/></div>
+      <div class="client-gcard" onclick="openLightbox(8)"><img src="https://images.unsplash.com/photo-1501901609772-df0848060b33?w=400&q=80" alt=""/></div>
+    </div>
+    <div class="download-bar">
+      <div class="download-info">
+        <strong>Download Your Full Gallery</strong>
+        All 247 high-resolution photos · Delivered via Google Drive link · Expires June 2025
+      </div>
+      <a href="#" class="btn btn-gold" onclick="alert('In the live version, this would open your Google Drive download link!');return false">Download All Photos ↓</a>
+    </div>
+  </div>
+
+</div><!-- /page-portal -->
+
+
+<!-- ═══════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════ -->
+<div class="page" id="page-contact">
+
+  <div class="contact-hero">
+    <span class="eyebrow">✦ Get in Touch</span>
+    <h1 class="h2">Let's Begin <i>Your Story</i></h1>
+    <p class="body-text" style="max-width:500px">I'd love to hear about your wedding. Tell me your date, vision, and anything that makes your love story unique.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-left reveal">
+      <div class="contact-detail">
+        <div class="cd-icon">✉</div>
+        <div><div class="cd-label">Email</div><div class="cd-val">weddingcaptureboy@gmail.com</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="cd-icon">✆</div>
+        <div><div class="cd-label">Phone / WhatsApp</div><div class="cd-val">+91 9576611526</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="cd-icon">◉</div>
+        <div><div class="cd-label">Location</div><div class="cd-val">Available Pan-India & Destination Weddings Worldwide</div></div>
+      </div>
+      <div class="contact-detail">
+        <div class="cd-icon">◷</div>
+        <div><div class="cd-label">Response Time</div><div class="cd-val">Usually within 24 hours</div></div>
+      </div>
+      <div class="socials">
+        <a href="#" class="social-btn">IG</a>
+        <a href="#" class="social-btn">FB</a>
+        <a href="https://www.instagram.com/" class="social-btn">YT</a>
+        <a href="https://wa.me/123456789" target="_blank" class="social-btn">WA</a>
+        <a href="#" class="social-btn">PI</a>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <div id="contact-form-wrap">
+        <div class="form-row">
+          <div class="fg"><label>Your Name</label><input type="text" placeholder="e.g. Priya Sharma"/></div>
+          <div class="fg"><label>Partner's Name</label><input type="text" placeholder="e.g. Arjun Mehta"/></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"/></div>
+          <div class="fg"><label>Phone</label><input type="tel" placeholder="+91 00000 00000"/></div>
+        </div>
+        <div class="form-row">
+          <div class="fg"><label>Wedding Date</label><input type="date"/></div>
+          <div class="fg"><label>Package Interest</label>
+            <select>
+              <option value="">Select a Package</option>
+              <option>Elopement</option>
+              <option>Classic Wedding</option>
+              <option>Grand Wedding</option>
+              <option>Destination Wedding</option>
+              <option>Custom / Not Sure Yet</option>
+            </select>
+          </div>
+        </div>
+        <div class="fg"><label>Wedding Venue / City</label><input type="text" placeholder="e.g. The Leela, Mumbai"/></div>
+        <div class="fg"><label>Tell Me About Your Day</label><textarea placeholder="Your style, dream moments you want captured, any special details..."></textarea></div>
+        <button class="btn btn-gold form-submit" onclick="submitForm(this)">Send My Story ✦</button>
+      </div>
+      <div class="form-success" id="form-success">
+        ✦ Thank you! Your message has been received.<br/>
+        <span style="font-size:.7rem;font-family:'DM Sans',sans-serif;color:var(--smoke);font-style:normal">I'll be in touch within 24 hours.</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-contact -->
+
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer id="main-footer">
+  <div>
+    <a href="#" class="f-logo" onclick="showPage('home');return false">Eternal <b>Frames</b></a>
+    <p class="f-tag">Capturing love in its most honest, beautiful, and timeless form — one wedding at a time across India and beyond.</p>
+  </div>
+  <div class="f-col">
+    <h5>Navigate</h5>
+    <ul class="f-links">
+      <li><a href="#" onclick="showPage('home');return false">Home</a></li>
+      <li><a href="#" onclick="showPage('gallery');return false">Gallery</a></li>
+      <li><a href="#" onclick="showPage('videos');return false">Films</a></li>
+      <li><a href="#" onclick="showPage('pricing');return false">Pricing</a></li>
+      <li><a href="#" onclick="showPage('contact');return false">Contact</a></li>
+    </ul>
+  </div>
+  <div class="f-col">
+    <h5>Services</h5>
+    <ul class="f-links">
+      <li><a href="#">Wedding Photography</a></li>
+      <li><a href="#">Cinematic Videos</a></li>
+      <li><a href="#">Pre-Wedding Shoot</a></li>
+      <li><a href="#">Destination Weddings</a></li>
+      <li><a href="#">Albums & Prints</a></li>
+    </ul>
+  </div>
+  <div class="f-col">
+    <h5>Social</h5>
+    <ul class="f-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">YouTube</a></li>
+      <li><a href="#">Pinterest</a></li>
+      <li><a href="#">WhatsApp</a></li>
+    </ul>
+  </div>
+  <div class="f-bottom">
+    <span>© 2025 Eternal Frames. All rights reserved.</span>
+    <span>Made with ♥ for love stories - by Babar Ali</span>
+  </div>
+</footer>
+
+
+<!-- ── SCRIPTS ── -->
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/videos.js"></script>
+<script src="js/pricing.js"></script>
+<script src="js/portal-contact.js"></script>
+
+</body>
+</html>

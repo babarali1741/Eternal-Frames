@@ -1,0 +1,101 @@
+/* ============================================================
+   ETERNAL FRAMES — Main Stylesheet
+   style.css
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0e0c0a;
+  --parchment:#f7f2ea;
+  --gold:#b8955a;
+  --gold2:#d4ae78;
+  --gold-pale:#ede0c8;
+  --ash:#3a3530;
+  --smoke:#7a746c;
+  --glass:rgba(14,12,10,0.85);
+  --r:0px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--parchment);overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;inset:0 0 auto;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:26px 6%;transition:all .4s}
+nav.solid{background:rgba(14,12,10,.96);padding:16px 6%;backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,149,90,.12)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:300;color:var(--parchment);text-decoration:none;letter-spacing:.04em;flex-shrink:0}
+.nav-logo b{color:var(--gold);font-style:italic;font-weight:400}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0 24px}
+.nav-links a{color:var(--parchment);text-decoration:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:300;opacity:.75;transition:opacity .3s,color .3s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{opacity:1;color:var(--gold)}
+.nav-book{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:9px 22px;text-decoration:none;transition:all .3s;white-space:nowrap;flex-shrink:0}
+.nav-book:hover{background:var(--gold);color:var(--ink)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:1px;background:var(--parchment);transition:all .3s}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none;min-height:100vh}
+.page.active{display:block}
+
+/* ── PAGE TRANSITIONS ── */
+@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.page.active{animation:pageIn .55s ease forwards}
+
+/* ── SHARED ── */
+.section{padding:clamp(70px,11vw,130px) 7%}
+.eyebrow{font-size:.6rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block}
+.h2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.08;margin-bottom:28px}
+.h2 i{font-style:italic;color:var(--gold)}
+.body-text{font-size:.8rem;line-height:1.95;color:var(--gold-pale);opacity:.82;font-weight:300}
+.btn{display:inline-block;padding:14px 36px;font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;transition:all .3s;border:none;font-family:'DM Sans',sans-serif;cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--ink);font-weight:500}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:var(--gold);color:var(--ink)}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+.divider{display:flex;align-items:center;gap:18px;margin:0 7% 50px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent)}
+.divider span{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:1.1rem;white-space:nowrap}
+
+/* ── FOOTER ── */
+footer{background:#060504;border-top:1px solid rgba(184,149,90,.1);padding:70px 7% 32px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:50px}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:300;color:var(--parchment);text-decoration:none;display:block;margin-bottom:14px}
+.f-logo b{color:var(--gold);font-style:italic;font-weight:400}
+.f-tag{font-size:.72rem;line-height:1.9;color:var(--smoke);font-weight:300}
+.f-col h5{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.f-links{list-style:none}
+.f-links li{margin-bottom:11px}
+.f-links a{color:var(--smoke);text-decoration:none;font-size:.72rem;font-weight:300;transition:color .3s}
+.f-links a:hover{color:var(--parchment)}
+.f-bottom{grid-column:1/-1;border-top:1px solid rgba(184,149,90,.1);padding-top:28px;display:flex;justify-content:space-between;font-size:.6rem;color:rgba(122,116,108,.45);letter-spacing:.08em}
+
+/* ── WHATSAPP BUTTON ── */
+.wa-btn{position:fixed;bottom:34px;right:34px;z-index:400;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.wa-tooltip{background:var(--ink);border:1px solid rgba(184,149,90,.3);padding:10px 16px;font-size:.68rem;color:var(--parchment);font-weight:300;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .35s;pointer-events:none}
+.wa-btn:hover .wa-tooltip{opacity:1;transform:none}
+.wa-circle{width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 24px rgba(37,211,102,.35);transition:transform .3s,box-shadow .3s;text-decoration:none}
+.wa-circle:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(37,211,102,.5)}
+.wa-circle svg{width:28px;height:28px;fill:#fff}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 4px 24px rgba(37,211,102,.35),0 0 0 14px rgba(37,211,102,0)}}
+.wa-circle{animation:waPulse 2.5s ease-in-out infinite}
+
+/* ── MOBILE NAV DRAWER ── */
+.mobile-nav{position:fixed;inset:0 0 0 30%;background:rgba(10,8,6,.98);z-index:600;transform:translateX(100%);transition:transform .4s;display:flex;flex-direction:column;padding:90px 40px 40px;gap:8px;backdrop-filter:blur(20px)}
+.mobile-nav.open{transform:none}
+.mobile-nav a{color:var(--parchment);text-decoration:none;font-size:1.1rem;font-family:'Playfair Display',serif;font-weight:300;padding:14px 0;border-bottom:1px solid rgba(184,149,90,.1);transition:color .3s}
+.mobile-nav a:hover{color:var(--gold)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .nav-links{gap:18px}
+  .nav-links a{font-size:.6rem;letter-spacing:.12em}
+}
+@media(max-width:1024px){
+  footer{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav-links,.nav-book{display:none}
+  .hamburger{display:flex}
+}
+@media(max-width:768px){
+  footer{grid-template-columns:1fr}
+}

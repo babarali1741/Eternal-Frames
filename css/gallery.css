@@ -1,0 +1,42 @@
+/* ============================================================
+   ETERNAL FRAMES — Gallery Page Styles
+   css/gallery.css
+   ============================================================ */
+
+/* ── GALLERY HERO ── */
+.gallery-hero{height:45vh;background:linear-gradient(to bottom,rgba(14,12,10,.7),rgba(14,12,10,.95)),url('../images/gallery-hero.jpg')center/cover;display:flex;align-items:flex-end;padding:0 7% 60px}
+
+/* ── FILTERS ── */
+.gallery-filters{display:flex;gap:12px;margin:40px 7% 32px;flex-wrap:wrap}
+.filter-btn{padding:9px 22px;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(184,149,90,.3);background:transparent;color:var(--smoke);cursor:pointer;transition:all .3s;font-family:'DM Sans',sans-serif}
+.filter-btn.active,.filter-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(184,149,90,.06)}
+
+/* ── MASONRY GRID ── */
+.gallery-masonry{columns:3;column-gap:10px;padding:0 7% 80px}
+.gallery-masonry .gcard{break-inside:avoid;margin-bottom:10px;position:relative;overflow:hidden;cursor:pointer}
+.gallery-masonry .gcard img{width:100%;display:block;transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .5s;filter:brightness(.9)saturate(.95)}
+.gallery-masonry .gcard:hover img{transform:scale(1.06);filter:brightness(1)saturate(1.05)}
+.gcard-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,10,.75)0%,transparent 55%);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:18px}
+.gcard:hover .gcard-overlay{opacity:1}
+.gcard-tag{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* ── LIGHTBOX ── */
+.lightbox{position:fixed;inset:0;background:rgba(8,7,5,.97);z-index:800;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lb-inner{position:relative;max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center}
+.lb-img{max-width:100%;max-height:80vh;object-fit:contain;display:block}
+.lb-caption{margin-top:18px;font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.lb-close{position:fixed;top:28px;right:36px;background:none;border:1px solid rgba(184,149,90,.4);color:var(--gold);width:44px;height:44px;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.lb-close:hover{background:var(--gold);color:var(--ink)}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(184,149,90,.3);color:var(--gold);width:48px;height:72px;font-size:1.2rem;cursor:pointer;transition:all .3s}
+.lb-nav:hover{background:rgba(184,149,90,.12)}
+.lb-prev{left:24px}
+.lb-next{right:24px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .gallery-masonry{columns:2}
+}
+@media(max-width:600px){
+  .gallery-masonry{columns:1}
+}
