@@ -39,9 +39,6 @@ eternal-frames/
 | Client Portal | `#page-portal`    | Password-protected photo gallery         |
 | Contact       | `#page-contact`   | Enquiry form + contact details           |
 
-## Demo Login (Client Portal)
-- **Email:** priya@email.com  
-- **Password:** wedding2024
 
 ## How to Run
 Simply open `index.html` in any modern browser. No build tools or server required.
